@@ -18,7 +18,7 @@ public class Main {
                         BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                         PrintWriter out = new PrintWriter(socket.getOutputStream());
                 ) {
-                    String input = in.readLine();
+                    String input = in.readLine().toLowerCase();
                     BooleanSearchEngine engine = new BooleanSearchEngine(new File("pdfs"));
                     var listPageEntry = engine.search(input);
                     Gson gson = new Gson();
